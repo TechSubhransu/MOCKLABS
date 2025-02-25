@@ -1,0 +1,17 @@
+{% extends "student/base.html" %}
+
+{% block title %}
+  My_Ratings
+{% endblock title %}
+
+{% block content %}
+  <h1>Welcome To My Ratings Page🙏🙏</h1>
+  {% for rating in SO.ratings.all %}
+    <h1 style="color: red;">{{rating.subject}} on {{rating.conducted_on}} by {{rating.conducted_by.first_name}} </h1>
+  {% endfor %}
+  <!-- {% if SO.ratings.all %} 
+  Data exists
+  {% else %} 
+  No data 
+  {% endif %} -->
+{% endblock content %}
